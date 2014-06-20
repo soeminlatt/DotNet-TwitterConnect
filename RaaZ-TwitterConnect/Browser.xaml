@@ -1,0 +1,22 @@
+﻿<Window x:Class="RaaZ_TwitterConnect.Browser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Browser" Height="631.5" Width="800" Loaded="Window_Loaded_1">
+    <Grid>
+        <TextBox TextWrapping="Wrap" Name="tbPin" Margin="286,532,294,0" Height="27" VerticalAlignment="Top"/>
+        <WebBrowser Name="browserControl" Margin="0,32,0,0"  Navigated="browserControl_Navigated" Height="495" VerticalAlignment="Top" Navigating="browserControl_Navigating" />
+        <Button Margin="503,532,244,0" Content="Send" Name="btnSend" Click="btnSend_Click" Height="27" VerticalAlignment="Top"/>
+        <Button Margin="727,0,5,0" Content="Refresh" Name="btnRefresh" Click="btnRefresh_Click" Height="22" VerticalAlignment="Top"/>
+        <Label Content="http://www.twitter.com" Name="lblUri" Height="32" VerticalAlignment="Top" Margin="0,0,65,0" Focusable="True"/>
+        <GridSplitter HorizontalAlignment="Left" Height="5" Margin="0,27,0,0" VerticalAlignment="Top" Width="782"/>
+        <StatusBar Height="30" VerticalAlignment="Bottom" Name="bStatusBar" >
+            <StatusBarItem>
+                <TextBlock Width="531" Name="statusBarMessage">TextBlok here..</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Name="progressBar" IsIndeterminate="True" Height="24" RenderTransformOrigin="0.5,0.5" Width="246">
+                </ProgressBar>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
